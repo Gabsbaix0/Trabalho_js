@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array Methods</h1>
+
+<h2>Array.concat()</h2>
+
+
+<p> O concat() pega um ou mais arrays e junta eles em um novo array. Os arrays originais não são modificados, ele cria uma lista novinha com todos os itens juntos.</p>
+
+<p id="demo"></p>
+
+<script>
+
+let lista1 = [1, 2, 3];
+let lista2 = [4, 5, 6];
+let lista3 = [7, 8];
+
+let listaCompleta = lista1.concat(lista2, lista3);
+
+console.log(listaCompleta); // Saída: [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(lista1);        // Saída: [1, 2, 3] (a lista original não mudou)
+console.log(lista2);        // Saída: [4, 5, 6] (a lista original não mudou)
+
+
+//Outro exemplo: 
+let tarefasManha = ["Lavar a louça", "Fazer café"];
+let tarefasTarde = ["Estudar", "Fazer exercícios"];
+
+let todasTarefas = tarefasManha.concat(tarefasTarde);
+
+console.log("Lista de tarefas completa:", todasTarefas); // Saída: Lista de tarefas completa: ["Lavar a louça", "Fazer café", "Estudar", "Fazer exercícios"]
+console.log("Lista da manhã original:", tarefasManha);   // Saída: Lista da manhã original: ["Lavar a louça", "Fazer café"]
+console.log("Lista da tarde original:", tarefasTarde);   // Saída: Lista da tarde original: ["Estudar", "Fazer exercícios"]
+
+
+document.getElementById("demo").innerHTML ;
+
+</script>
+
+</body>
+</html>

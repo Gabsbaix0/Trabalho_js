@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array Methods</h1>
+
+<h2>Array.slice()</h2>
+
+
+<p> O slice() pega um pedacinho da sua lista de coisas e faz uma lista nova só com esse pedacinho. A sua lista original fica do mesmo jeito. É como tirar uma foto de uma parte do seu desenho, o desenho inteiro continua lá. <br>
+    Você só precisa dizer onde começa o pedacinho que você quer copiar e onde ele termina (lembrando que o finalzinho não entra na cópia).<br>
+    slice(start): Extrai do índice start até o final do array.<br>
+    slice(start, end): Extrai do índice start até o índice end (excluindo o elemento no índice end).
+     </p>
+
+<p id="demo"></p>
+
+<script>
+
+let frutas = ["banana", "maçã", "laranja", "uva", "melão"];
+let pedaco1 = frutas.slice(1, 3); // Pega do índice 1 (maçã) até o índice 3 (laranja), sem incluir o 3
+let pedaco2 = frutas.slice(2);    // Pega do índice 2 (laranja) até o final
+
+console.log(pedaco1); // Saída: ["maçã", "laranja"]
+console.log(pedaco2); // Saída: ["laranja", "uva", "melão"]
+console.log(frutas);  // Saída: ["banana", "maçã", "laranja", "uva", "melão"] (o array original não mudou)
+
+
+//Outro exemplo: 
+
+let produtos = ["Camiseta", "Calça", "Sapato", "Meia", "Boné"];
+
+console.log("Lista de produtos original:", produtos); // Saída: ["Camiseta", "Calça", "Sapato", "Meia", "Boné"]
+
+// Pegar os dois primeiros produtos
+let primeirosDois = produtos.slice(0, 2);
+console.log("Primeiros dois produtos:", primeirosDois); // Saída: ["Camiseta", "Calça"]
+
+// Pegar do terceiro produto até o final
+let doTerceiroEmDiante = produtos.slice(2);
+console.log("Do terceiro em diante:", doTerceiroEmDiante); // Saída: ["Sapato", "Meia", "Boné"]
+
+// Pegar os dois últimos produtos usando índices negativos
+let ultimosDois = produtos.slice(-2);
+console.log("Últimos dois produtos:", ultimosDois);   // Saída: ["Meia", "Boné"]
+
+// Criar uma cópia superficial do array inteiro
+let copiaProdutos = produtos.slice();
+console.log("Cópia dos produtos:", copiaProdutos);   // Saída: ["Camiseta", "Calça", "Sapato", "Meia", "Boné"]
+
+console.log("Lista de produtos original (inalterada):", produtos); // Saída: ["Camiseta", "Calça", "Sapato", "Meia", "Boné"]
+
+
+document.getElementById("demo").innerHTML ;
+
+</script>
+
+</body>
+</html>

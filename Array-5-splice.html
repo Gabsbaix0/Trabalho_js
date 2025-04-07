@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array Methods</h1>
+
+<h2>Array.splice()</h2>
+
+
+<p> O splice() é um método poderoso que nos permite fazer inserções e remoções de elementos em qualquer posição do array. </p>
+
+<p id="demo"></p>
+
+<script>
+
+let convidados = ["Ana", "Bruno", "Carlos", "Diana"];
+let removidoEAdicionado = convidados.splice(1, 1, "Felipe"); // Remove "Bruno" (na posição 1) e adiciona "Felipe" no lugar
+
+console.log("Convidado removido:", removidoEAdicionado); // Saída: Convidado removido: ["Bruno"]
+console.log("Lista de convidados atualizada:", convidados); // Saída: Lista de convidados atualizada: ["Ana", "Felipe", "Carlos", "Diana"]
+
+
+
+//Outro exemplo: 
+
+let frutas = ["banana", "uva"];
+frutas.splice(1, 0, "maçã", "laranja"); // Na posição 1, não remove nada (0), e adiciona "maçã" e "laranja"
+
+console.log(frutas); // Saída: ["banana", "maçã", "laranja", "uva"]
+
+document.getElementById("demo").innerHTML ;
+
+</script>
+
+</body>
+</html>

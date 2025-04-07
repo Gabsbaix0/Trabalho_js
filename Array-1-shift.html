@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array Methods</h1>
+
+<h2>Array.shift()</h2>
+
+
+<p> Opera diretamente no array original, removendo o elemento que está na primeira posição (índice 0), e te diz qual era esse elemento que saiu.</p>
+
+<p id="demo"></p>
+
+<script>
+let frutas = ["banana", "maçã", "laranja"];
+let primeiraFruta = frutas.shift();
+
+console.log(primeiraFruta); // Saída: "banana" (a fruta que saiu)
+console.log(frutas);      // Saída: ["maçã", "laranja"] (o array agora sem a banana)
+
+//Outro exemplo: 
+let tarefas = ["Comprar pão", "Lavar o carro", "Pagar contas"];
+let primeiraTarefa = tarefas.shift();
+
+console.log("Tarefa concluída:", primeiraTarefa); // Saída: "Tarefa concluída: Comprar pão"
+console.log("Lista de tarefas restante:", tarefas);   // Saída: "Lista de tarefas restante: ['Lavar o carro', 'Pagar contas']"
+
+document.getElementById("demo").innerHTML ;
+
+</script>
+
+</body>
+</html>

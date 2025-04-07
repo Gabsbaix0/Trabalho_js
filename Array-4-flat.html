@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array Methods</h1>
+
+<h2>Array.flat()</h2>
+
+
+<p> O Array.flat() cria um novo array contendo todos os elementos de sub-arrays concatenados,
+    isso significa que, se houver listas dentro de outras listas, elas serão "desempacotadas" 
+    e seus elementos serão inseridos em uma única lista, de maneira organizada, respeitando a 
+    profundidade definida. <br> O flat() também permite especificar a profundidade de 
+     níveis de aninhamento você quer aplanar.
+</p>
+
+<p id="demo"></p>
+
+<script>
+
+let brinquedosAninhados = ["bola", "boneca", ["carrinho", "quebra-cabeça"], "lego"];
+
+// Usando flat() sem especificar a profundidade (aplana um nível)
+let brinquedosAchatadosNivel1 = brinquedosAninhados.flat();
+console.log(brinquedosAchatadosNivel1); // Saída: ["bola", "boneca", "carrinho", "quebra-cabeça", "lego"]
+
+
+
+//Outro exemplo: 
+let brinquedosMuitoAninhados = [1, 2, [3, [4, [5, 6]]]];
+
+// Aplanando apenas um nível
+let aplanadoNivel1 = brinquedosMuitoAninhados.flat(1);
+console.log(aplanadoNivel1); // Saída: [1, 2, 3, [4, [5, 6]]]
+
+// Aplanando dois níveis
+let aplanadoNivel2 = brinquedosMuitoAninhados.flat(2);
+console.log(aplanadoNivel2); // Saída: [1, 2, 3, 4, [5, 6]]
+
+// Aplanando até o nível máximo (infinito)
+let aplanadoInfinito = brinquedosMuitoAninhados.flat(Infinity);
+console.log(aplanadoInfinito); // Saída: [1, 2, 3, 4, 5, 6]
+
+document.getElementById("demo").innerHTML ;
+
+</script>
+
+</body>
+</html>
